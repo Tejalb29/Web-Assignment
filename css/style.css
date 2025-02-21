@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;300;400;500;600&display=swap');
+
+:root{
+   --main-color:#8e44ad;
+   --red:#e74c3c;
+   --oragen:#f39c12;
+   --white:#fff;
+   --black:#2c3e50;
+   --light-color:#888;
+   --light-bg:#eee;
+   --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+   font-family: 'poppins', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color: #fff;
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background-image: url('../images/contactbackground.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding-left: 30rem;
+}
+
+body.dark{
+   --white:#222;
+   --black:#fff;
+   --light-color:#aaa;
+   --light-bg:#333;
+   --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active{
+   padding-left: 0;
+}
+
+section{
+   padding:2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   border-radius: .5rem;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   color: #fff;
+   margin-top: 1rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn,
+.option-btn,
+.delete-btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: rgb(45, 6, 130);
+   border-radius: 0px;
+   
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color:white;
+   color:black;
+   border-radius: 0px;
+   height: 35px;
+   font-size: 1.2rem;
+   position: relative;
+   top:-15px;
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+   border-radius: 0px;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover{
+   background-color: rgb(153, 129, 252);
+   color: black;
+}
+
+.flex-btn{
+display:flex;
+gap: 3rem;
+position: relative;
+left:35%;
+padding-right: 10px;
+
+}
+
+.message{
+   position: sticky;
+   top:0;
+   margin:0 auto;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   gap:1rem;
+   justify-content: space-between;
+}
+
+.message.form{
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: var(--white);
+   top: 2rem;
+   border-radius: .5rem;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--red);
+   cursor: pointer;
+   transition: .2s linear;
+}
+
+.message i:hover{
+   transform: rotate(90deg);
+}
+
+.empty{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 1.5rem;
+   text-align: center;
+   width: 100%;
+   font-size: 2rem;
+   color: var(--red);
+}
+
+.heading{
+   padding-bottom: 1.8rem;
+   border-bottom: var(--border);
+   font-size: 30px;
+   color: rgb(255, 255, 255);
+   text-transform: capitalize;
+   margin-bottom: 3rem;
+}
+
+.heading:hover{
+color:rgb(69, 6, 205);
+}
+
+.description{
+   color:white;
+}
+
+.header{
+   width: 2300px; 
+   background-image: url('../images/containerbg.png'); 
+   border-bottom: var(--border);
+   position: relative;
+   top: 0; right: 25%;
+   z-index: 1000;
+   height:80px;
+}
+
+.header .flex{
+   padding: 1.5rem 2rem; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+}
+
+.header .flex .logo{
+   color: white;
+   font-weight: bolder;
+   position:relative;
+   right:14.5%;
+   display: flex;
+   width:20%;
+
+}
+
+.header .flex .logo:hover{
+color:rgb(182, 157, 235);
+}
+
+.search-container {
+   flex-grow: 1; 
+   display: flex;
+   justify-content: center; 
+}
+
+.header .flex .search-form{
+   width: 80%;
+   border-radius: 0rem;
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   padding: 1.5rem 2rem;
+   background-color: var(--light-bg);
+   height:35px;
+   position: relative;
+   left:350px;
+   top:-10px;
+   width:250px;
+}
+
+.box .description{
+   color:black;
+}
+
+.description h2:hover{
+color:rgb(69, 6, 205);
+}
+
+.header .flex .search-form input{
+   width: 100%;
+   background:none;
+   font-size: 2rem;
+   color: black;
+  
+}
+
+.header .flex .search-form button{
+   font-size: 2rem;
+   color: var(--black);
+   cursor: pointer;
+   background: none;
+}
+
+.header .flex .search-form button:hover{
+   color:  rgb(153, 129, 252);
+}
+
+.header .flex .icons div{
+   font-size: 2rem;
+   color: var(--black);
+   border-radius: .5rem;
+   height: 4.5rem;
+   cursor: pointer;
+   width: 4.5rem;
+   line-height: 4.4rem;
+   background-color: var(--light-bg);
+   text-align: center;
+   margin-left: .5rem;
+}
+
+.header .flex .icons div:hover{
+   background-color: var(--black);
+   color:var(--white);
+}
+
+#search-btn{
+   display: none;
+}
+
+.header .navbar {
+   display: flex;
+   gap: 40px; 
+   position: relative;
+   left:230px;
+   top:-10px;
+   width:100%;
+}
+
+.header .navbar a {
+   color: white; 
+}
+
+.header .navbar a:hover{
+  color: rgb(182, 157, 235);
+
+}
+
+.description{
+   font-size: 15px;
+}
+
+.courses .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 8rem;
+   justify-content: center;
+   position: relative;
+   right:200px;
+   width:1350px;
+}
+
+.courses .box-container .box{
+   border-radius: 0rem;
+   background-color: var(--white);
+   padding: 2rem;
+   height:100%;
+   
+}
+
+.courses .box-container .box .tutor{
+   margin-bottom: 2rem;
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+
+.courses .box-container .box .tutor img{
+   width: 5rem;
+   height: 5rem;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: .5rem;
+}
+
+.courses .box-container .box .tutor h3{
+   font-size: 2rem;
+   color: var(--black);
+   margin-bottom: .2rem;
+}
+
+.courses .box-container .box .tutor span{
+   font-size: 1.5rem;
+   color: var(--light-color);
+}
+
+.courses .box-container .box .thumb{
+   width: 100%;
+   border-radius: .5rem;
+   height: 20rem;
+   object-fit: cover;
+   margin-bottom: .3rem;
+}
+
+.courses .box-container .box .title{
+   font-size: 2rem;
+   color: var(--black);
+   margin-top: .5rem;
+   padding: .5rem 0;
+}
+
+.courses .more-btn{
+   margin-top: 2rem;
+   text-align: center;
+}
+
+.about .row{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+}
+
+.about .row .image{
+   flex: 1 1 40rem;
+}
+
+.about .row .image img{
+   width: 100%;
+   height: 50rem;
+}
+
+.about .row .content{
+   flex: 1 1 40rem;
+   text-align: justify;
+   justify-content: center;
+   position:relative;
+   left:350px;
+   bottom:490px;
+}
+
+.about .row .content h3{
+   font-size: 2.5rem;
+   color: white;
+}
+.about .row .content h3:hover{
+   color:rgb(69, 6, 205);
+
+}
+
+.about .row .content p{
+   line-height: 2;
+   font-size: 1.8rem;
+   color: white;
+   padding: 1rem 0;
+}
+
+.about .box-container{
+   margin-top: 3rem;
+   display: flex;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+}
+
+.about .box-container .box{
+   flex: 1 1 25rem;
+   display: flex;
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 2rem;
+   align-items: center;
+   gap: 2rem;
+}
+
+.about .box-container .box i{
+   font-size: 3rem;
+   color: var(--black);
+}
+
+.about .box-container .box h3{
+   color: var(--main-color);
+   font-size: 2.5rem;
+   margin-bottom: .2rem;
+}
+
+.about .box-container .box span{
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+section.account-form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   padding: 0;
+}
+
+.account-form form {
+   background: var(--white);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   border: var(--border);
+   border-radius: 0rem;
+   max-width: 50rem;
+   width: 100%; 
+   position:relative;
+   left:-100px;
+   top:-30px;
+}  
+
+.account-form form h3{
+   padding-bottom: 1rem;
+   font-size: 2.5rem;
+   color: rgb(45, 6, 130);
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.account-form form p{
+   padding-top: 1rem;
+   font-size: 1.6rem;
+   color: black;
+}
+
+.account-form form p span{
+   color: var(--red);
+}
+
+.account-form form .box{
+   width: 100%;
+   border-radius: 0rem;
+   padding: 1.4rem;
+   font-size: 1.8rem;
+   color: var(--black);
+   background-color: var(--light-bg);
+   margin: 1rem 0;
+}
+
+.account-form form textarea{
+   height: 15rem;
+   resize: vertical;
+}
+
+.account-form form .image{
+   height: 20rem;
+   width: 100%;
+   object-fit: contain;
+   margin-top: .5rem;
+}
+
+.account-form form .link{
+   padding: 1rem 0;
+   text-align: center;
+   font-size: 1.8rem;
+   color: var(--light-color);
+}
+
+.account-form form .link a{
+   color: var(--red);
+}
+
+.account-form form .link a:hover{
+   text-decoration: underline;
+}
+
+
+.carousel {
+   position: relative;
+   height: 500px; 
+   overflow: hidden; 
+   width:450px;
+   right:200px;
+   top:30px;
+}
+
+.carousel-slide {
+   position: absolute;
+   width: 100%; 
+   height: 100%; 
+   transition: transform 1s ease-in-out; 
+}
+
+.carousel-slide img {
+   width: 100%; 
+   height: 300px; 
+}
+
+.reviews .heading{
+   position:relative;
+   right:200px;
+   bottom:400px;
+   width:1350px;
+}
+
+.reviews .heading:hover{
+color:rgb(45, 6, 130);
+}
+
+.reviews .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 5rem;
+   align-items: flex-start;
+   justify-content: center;
+   width:1300px;
+   height:250px;
+}
+
+.reviews .box-container .box{
+   border-radius: 0rem;
+   padding: 2rem;
+   background-color: var(--white);
+   padding-top: 1.5rem;
+   height:100%;
+   position:relative;
+   right:180px;
+   bottom:350px;
+}
+
+.reviews .box-container .box p{
+   line-height: 2;
+   font-size: 1.7rem;
+   color: black;
+}
+
+.reviews .box-container .box .user{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   margin-top: 1.5rem;
+}
+
+.reviews .box-container .box .user img{
+   height: 5rem;
+   width: 5rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.reviews .box-container .box .user h3{
+   font-size: 2rem;
+   color: var(--black);
+   margin-bottom: .2rem;
+}
+
+.reviews .box-container .box .user .stars i{
+   color: var(--main-color);
+   font-size: 1.5rem;
+}
+
+.reviewbtn {
+   display: inline-block;        
+   padding: 10px 20px;         
+   background-color: rgb(45, 6, 130);   
+   color: white;              
+   border: none;                
+   font-size: 20px;             
+   text-decoration: none;       
+   margin-top: 20px;           
+   cursor: pointer;  
+   position: relative;
+   bottom:25px;  
+   left:400px;
+}
+
+.reviewbtn:hover{
+   background-color:  rgb(153, 129, 252)
+
+}
+
+.contact .row{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+}
+
+.contact .row .image{
+   flex: 1 1 50rem;
+}
+
+.contact .row .image img{
+   height: 50rem;
+   width: 100%;
+   position: relative;
+   right:150px;
+
+}
+
+.contact .row form{
+   flex:1 1 30rem;
+   background-color: var(--white);
+   border-radius: 0rem;
+   padding: 2rem;
+   text-align: center;
+}
+
+.contact .row form h3{
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color:rgb(45, 6, 130);
+}
+
+
+.contact .row form .box{
+   width: 100%;
+   margin: 1rem 0;
+   border-radius: 0rem;
+   background-color: var(--light-bg);
+   padding: 1.4rem;
+   color: var(--black);
+   font-size: 1.8rem;
+}
+
+.contact .row form textarea{
+   height: 20rem;
+   resize:vertical;
+}
+
+.contact .box-container{
+   margin-top: 3rem;
+   display: flex;
+   align-items: flex-start;
+   gap: 5rem;
+   flex-wrap: wrap;
+}
+
+.contact .box-container .box{
+   flex: 1 1 30rem;
+   border-radius: 0rem;
+   background-color: var(--white);
+   padding: 2rem;
+   text-align: center;
+   position:relative;
+   right:120px;
+   bottom:-40px;
+   margin-bottom: 50px;
+}
+
+.contact .box-container .box i{
+   font-size: 3rem;
+   color: rgb(45, 6, 130);
+   margin-bottom: 1rem;
+}
+
+.contact .box-container .box h3{
+   margin: 1.5rem 0;
+   font-size: 2rem;
+   color: rgb(45, 6, 130);
+   
+}
+
+.contact .box-container .box a{
+   display: block;
+   font-size: 1.7rem;
+   color: var(--light-color);
+   line-height: 1.5;
+   margin-top: .5rem;
+}
+
+.contact .box-container .box a:hover{
+   text-decoration: underline;
+   color: var(--main-color);
+}
+
+.form-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height:80vh;
+   position: relative;
+   right:10%;
+}
+
+.form-container form{
+   background-color: var(--white);
+   border-radius: 0rem;
+   padding: 2rem;
+}
+
+.form-container .login{
+   width: 50rem;
+}
+
+.form-container .register{
+   width: 80rem;
+}
+
+.form-container form h3{
+   text-align: center;
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color: rgb(45, 6, 130);
+   text-transform: capitalize;
+}
+
+.form-container form p{
+   padding-top: 1rem;
+   font-size: 1.7rem;
+   color: var(--light-color);
+}
+
+.form-container form p span{
+   color: var(--red);
+}
+
+.form-container .link{
+   padding-bottom: 1rem;
+   text-align: center;
+   font-size: 2rem;
+}
+
+.form-container .link a{
+   color: var(--main-color);
+}
+
+.form-container .link a:hover{
+   color: var(--black);
+   text-decoration: underline;
+}
+
+.form-container form .box{
+   width: 100%;
+   border-radius: 0rem;
+   margin: 1rem 0;
+   font-size: 1.8rem;
+   color: var(--black);
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+}
+
+.form-container .flex{
+   display: flex;
+   gap: 2rem;
+}
+
+.form-container .flex .col{
+   flex: 1 1 25rem;
+}
+
+
+@media (max-width:1200px){
+
+   body{
+      padding-left: 0;
+   }
+}
+
+@media (max-width:991px){
+   
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #search-btn{
+      display: inline-block;
+   }
+
+   .header .flex .search-form{
+      position: absolute;
+      top:99%; left: 0; right: 0;
+      width: auto;
+      border-top: var(--border);     
+      border-bottom: var(--border);
+      background-color: var(--white);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+
+   .header .flex .search-form.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .form-container .flex{
+      display: flex;
+      gap: 0;
+      flex-flow: column;
+   }
+
+   .watch-video .video-details .video{
+      height: 30rem;
+   }
+
+}
+
+@media (max-width:450px){
+   
+   html{
+      font-size: 50%;
+   }
+
+   .heading{
+      font-size: 2rem;
+   }
+
+   .flex-btn{
+      flex-flow: column;
+      gap: 0;
+   }
+
+   .about .row .image img{
+      height: auto;
+   }
+
+
+
+   .contact .row .image img{
+      height: auto;
+   }
+
+   .courses .box-container{
+      grid-template-columns: 1fr;
+   }
+
+}
