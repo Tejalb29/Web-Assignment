@@ -21,7 +21,7 @@ include 'connect.php';
 
         <section class="description">
         <div style="font-size:20px;color:white;position:relative;right:200px;">
-            <h2> to Virtu-Learn</h2>
+            <h2>Welcomeee to Virtu-Learn</h2>
         </div>
         <div style="margin-top:10px;position:relative;right:200px;width:1340px;">
             <p>At Virtu-Learn, we are passionate about empowering individuals through education. Our mission is to provide innovative, engaging, and personalized learning experiences that cater to learners from all walks of life. With a wide variety of courses, from beginner to advanced levels, we ensure that there is something for everyone. Whether you're looking to learn a new skill, enhance your professional development, or simply expand your knowledge, our platform is designed to support your growth. Join us on this exciting educational journey, and together, let’s unlock your full potential and achieve your goals!</p>
