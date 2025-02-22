@@ -13,20 +13,42 @@ include 'connect.php';
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     <?php include 'header.php'; ?> <
 
-        <section class="description">
-        <div style="font-size:20px;color:white;position:relative;right:200px;">
-            <h2>Welcomeee to Virtu-Learn</h2>
+    <div class="carousel-container">
+    <div class="carousel-left">
+        <div class="slide active">
+            <img src="Images/carousel1.png" alt="First Slide Image">
         </div>
-        <div style="margin-top:10px;position:relative;right:200px;width:1340px;">
-            <p>At Virtu-Learn, we are passionate about empowering individuals through education. Our mission is to provide innovative, engaging, and personalized learning experiences that cater to learners from all walks of life. With a wide variety of courses, from beginner to advanced levels, we ensure that there is something for everyone. Whether you're looking to learn a new skill, enhance your professional development, or simply expand your knowledge, our platform is designed to support your growth. Join us on this exciting educational journey, and together, let’s unlock your full potential and achieve your goals!</p>
+        <div class="slide inactive">
+            <img src="Images/carousel2.png" alt="Second Slide Image">
         </div>
-        </section>
+    </div>
+
+    <div class="carousel-right">
+        <div class="slide active">
+            
+            <div style="position:relative;top:50px;">
+                <p>At Virtu-Learn, we believe that every individual has the right to a unique, engaging, and enriching educational experience. Our mission is to create personalized learning pathways that are thoughtfully designed to meet the needs of learners from all walks of life, regardless of age, background, or skill level.</p>
+                <p>By focusing on flexibility, inclusivity, and continuous growth, we are committed to empowering learners to thrive at every step of their educational pursuits, equipping them with the tools and knowledge they need for success in an ever-evolving world.</p>
+            </div>
+        </div>
+
+        <div class="slide inactive">
+            
+            <div style="position:relative;top:50px;">
+                <p>At Virtu-Learn, we offer a wide variety of courses and learning materials aimed at making education exciting and accessible. Whether you're a high school student getting ready for important exams, a professional looking to learn new skills, or someone simply curious about the world, we've got something for you.</p>
+                <p>Our experienced educators are here to help you succeed, providing support and guidance every step of the way. Learning with us is not just about gaining knowledge—it's about enjoying the journey too.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
 
         <section class="courses">
             <div style="position:relative;right:200px;width:1350px;">
@@ -67,13 +89,12 @@ include 'connect.php';
                 ?>
             </div>
 
-            <div style="position:relative;right:5%;margin-top:50px;" class="more-btn">
+            <div style="position:relative;right:10%;margin-top:50px;" class="more-btn">
                 <a href="course.php" class="inline-option-btn">View More</a>
             </div>
         </section>
 
-        <script src="js/script.js"></script>
-
-</body>
+        <script src="script.js"></script>
+    </body>
 
 </html>
