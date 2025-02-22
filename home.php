@@ -35,6 +35,7 @@ include 'connect.php';
             
             <div style="position:relative;top:50px;">
                 <p>At Virtu-Learn, we believe that every individual has the right to a unique, engaging, and enriching educational experience. Our mission is to create personalized learning pathways that are thoughtfully designed to meet the needs of learners from all walks of life, regardless of age, background, or skill level.</p>
+                <br>
                 <p>By focusing on flexibility, inclusivity, and continuous growth, we are committed to empowering learners to thrive at every step of their educational pursuits, equipping them with the tools and knowledge they need for success in an ever-evolving world.</p>
             </div>
         </div>
@@ -42,7 +43,8 @@ include 'connect.php';
         <div class="slide inactive">
             
             <div style="position:relative;top:50px;">
-                <p>At Virtu-Learn, we offer a wide variety of courses and learning materials aimed at making education exciting and accessible. Whether you're a high school student getting ready for important exams, a professional looking to learn new skills, or someone simply curious about the world, we've got something for you.</p>
+                <p>We offer a wide variety of courses and learning materials aimed at making education exciting and accessible. Whether you're a high school student getting ready for important exams, a professional looking to learn new skills, or someone simply curious about the world, we've got something for you.</p>
+                <br>
                 <p>Our experienced educators are here to help you succeed, providing support and guidance every step of the way. Learning with us is not just about gaining knowledge—it's about enjoying the journey too.</p>
             </div>
         </div>
